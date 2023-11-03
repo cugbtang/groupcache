@@ -137,6 +137,9 @@ func callInitPeerServer() {
 	}
 }
 
+// 一个产品
+// 产品具有哪些功能，功能拆分到架构中的哪个组件/模块/包
+// 架构设计，设计各个entry,尽可能是独立的
 // A Group is a cache namespace and associated data loaded spread over
 // a group of 1 or more machines.
 type Group struct {
@@ -482,6 +485,7 @@ func (i *AtomicInt) String() string {
 	return strconv.FormatInt(i.Get(), 10)
 }
 
+// Gets（获取次数）、Hits（命中次数）和 Evictions（回收次数）
 // CacheStats are returned by stats accessors on Group.
 type CacheStats struct {
 	Bytes     int64
